@@ -1,14 +1,14 @@
 package com.example.ai_tv;
 
-import android.util.Log;
-
 import io.flutter.app.FlutterApplication;
+import io.flutter.plugin.common.PluginRegistry;
+import io.flutter.plugins.GeneratedPluginRegistrant;
+import vn.hunghd.flutterdownloader.FlutterDownloaderPlugin;
 
-public class MyApp extends FlutterApplication {
+public class MyApp extends FlutterApplication implements PluginRegistry.PluginRegistrantCallback{
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        Log.e("ABC", "MyApp onCreate");
+    public void registerWith(PluginRegistry registry) {
+        GeneratedPluginRegistrant.registerWith(registry);
     }
 }

@@ -3,6 +3,7 @@ import 'package:ai_tv/bean/MediaDetailsBean.dart';
 import 'package:ai_tv/bloc/RjDetailBloc.dart';
 import 'package:ai_tv/persistence/DatabaseClient.dart';
 import 'package:ai_tv/utils/Style.dart';
+import 'package:ai_tv/utils/navigator.dart';
 import 'package:ai_tv/widgets/FavoriteIcon.dart';
 import 'package:ai_tv/widgets/HeroBanner.dart';
 import 'package:ai_tv/widgets/PlayButton.dart';
@@ -136,6 +137,7 @@ class _RjDetailPageState extends State<RjDetailPage> with AutomaticKeepAliveClie
                 text:'下载',
                 width: 60,
                 radius: 10.0,
+                onPressed: () => switchToDownload(data),
                 fontSize: 20,
                 background: Colors.lightBlue,
                 padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
@@ -179,6 +181,11 @@ class _RjDetailPageState extends State<RjDetailPage> with AutomaticKeepAliveClie
         ],
       ),
     );
+  }
+
+  switchToDownload(MediaDetailsResponse response) {
+    print('switchToDowload');
+    goToDownloadSelection(context, response);
   }
 }
 

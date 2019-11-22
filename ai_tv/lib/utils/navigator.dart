@@ -2,10 +2,15 @@ import 'package:ai_tv/bean/HomPageBean.dart';
 import 'package:ai_tv/bean/MediaDetailsBean.dart';
 import 'package:ai_tv/pages/VideoScreen.dart';
 import 'package:ai_tv/pages/details/RjDetailPage.dart';
+import 'package:ai_tv/widgets/Demo.dart';
 import 'package:flutter/material.dart';
 
 goToMediaDetails(BuildContext context, HomeListEntity _entry) {
   _pushWidgetWithFade(context, RjDetailPage(_entry));
+}
+
+goToDownloadSelection(BuildContext context, MediaDetailsResponse response) {
+  _pushWidgetWithFade(context, Demo(response));
 }
 
 goToVideoScreen(BuildContext context, MediaDetailsResponse _response,
