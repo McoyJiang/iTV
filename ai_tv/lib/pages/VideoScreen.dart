@@ -56,7 +56,7 @@ class _VideoScreenState extends State<VideoScreen>
             ),
           ),
           new Container(height: 30,),
-          new AndroidView(viewType: 'banner'),
+          //new AndroidView(viewType: 'banner'),
           Image(image: CachedNetworkImageProvider("http://via.placeholder.com/350x150")),
         ],
       ),

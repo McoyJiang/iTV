@@ -46,6 +46,8 @@ class _MyHomePageState extends State<Demo> {
   void initState() {
     super.initState();
 
+    FlutterDownloader.initialize();
+
     _bindBackgroundIsolate();
 
     FlutterDownloader.registerCallback(downloadCallback);

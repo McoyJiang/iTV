@@ -1,4 +1,5 @@
 import 'package:ai_tv/bean/MediaDetailsBean.dart';
+import 'package:ai_tv/utils/navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
 
@@ -20,7 +21,6 @@ class PlayButton extends StatelessWidget {
     );
   }
 
-  /*一个渐变颜色的正方形集合*/
   List<Widget> Boxs(BuildContext context) =>
       List.generate(_response.seriesList.length, (index) {
         return NiceButton(
@@ -30,6 +30,7 @@ class PlayButton extends StatelessWidget {
           radius: 10.0,
           text: "${_response.seriesList[index].zhuti}",
           background: Colors.orangeAccent,
+          onPressed: () => goToVideoScreen(context, _response, _response.seriesList[index]),
         );
       });
 }

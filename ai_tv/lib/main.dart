@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 
 import 'pages/FuliPage.dart';
 import 'pages/MePage.dart';
@@ -9,6 +10,7 @@ import 'pages/home/home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  FlutterDownloader.initialize();
   runApp(App());
   if(Platform.isAndroid){
     SystemUiOverlayStyle style = SystemUiOverlayStyle(
